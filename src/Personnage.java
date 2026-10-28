@@ -4,6 +4,10 @@ public class Personnage {
     protected int niveau;
 
     public Personnage(String nom, int pv){
+        if (pv < 0){
+            throw new IllegalArgumentException("Nombre negatifs");
+        }
+
         this.nom = nom;
         this.pv = pv;
         niveau = 1;

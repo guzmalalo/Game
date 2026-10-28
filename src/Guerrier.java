@@ -11,10 +11,11 @@ public class Guerrier extends Personnage{
     }
 
 
-    public void attaquer(Personnage cible ){
-
+    @Override
+    public void attaque(Personnage cible) {
+        super.attaque(cible);
+        cible.prendreDegats(force*2);
     }
-
 
     @Override
     public String toString(){
