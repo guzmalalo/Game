@@ -1,12 +1,12 @@
 public class Guerrier extends Personnage{
-    private int force;
+    protected int force;
 
     public Guerrier(String nom){
-        this(nom, 100);
+        this(nom,100,100);
     }
 
-    public Guerrier(String nom, int force){
-        super(nom, 50);
+    public Guerrier(String nom, int pv, int force){
+        super(nom, pv);
         this.force = force;
     }
 
@@ -15,6 +15,7 @@ public class Guerrier extends Personnage{
     public void attaque(Personnage cible) {
         super.attaque(cible);
         cible.prendreDegats(force*2);
+        
     }
 
     @Override

@@ -23,6 +23,16 @@ public class Personnage {
         }
     }
 
+    public void prendreSoins(int soins){
+        if(soins < 0 || pv >= 100) {
+            return;
+        }
+
+        pv+= soins;
+        pv = pv>100 ? 100:pv; // if ternaire
+    }
+
+
     public int getPv(){
         return pv;
     }
@@ -33,9 +43,14 @@ public class Personnage {
         cible.prendreDegats(10);
     }
 
+
+    protected String presentation(){
+        return "Bonjour voyageur, je m'appelle " + nom;
+    }
+
     @Override
     public String toString(){
-        String message= "Bonjour voyageur, je m'appelle " + nom;
+        String message= presentation();
         return message;
     }
 
