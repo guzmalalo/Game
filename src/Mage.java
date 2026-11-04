@@ -19,7 +19,6 @@ public class Mage extends Personnage implements Soigneur{
             System.out.println("Pas assez de mana");
         }
     }
-
     @Override
     public String toString(){
         String message = super.toString() + " et je suis un Mage";

@@ -3,6 +3,12 @@ public class Personnage {
     private int pv; // point de vie
     protected int niveau;
 
+    protected Arme arme;
+
+    public void setArme(Arme arme){
+        this.arme =arme;
+    }
+
     public Personnage(String nom, int pv){
         if (pv < 0){
             throw new IllegalArgumentException("Nombre negatifs");

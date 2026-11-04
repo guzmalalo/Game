@@ -11,7 +11,7 @@ public class Paladin extends Guerrier {
 
     @Override
     public String toString(){
-        return  presentation() + "Je suis un paladin";
+        return  presentation() + "Je suis un paladin: " + arme;
     }
 
 }
